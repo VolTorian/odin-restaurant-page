@@ -32,3 +32,16 @@ body {
     font-size: 2rem;
     font-style: italic;
 }
+
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.item {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+}
