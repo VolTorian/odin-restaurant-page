@@ -27,14 +27,14 @@ function homePage() {
     const hoursTitle = document.createElement("div");
     hoursTitle.classList.add("section-title");
     hoursTitle.textContent = "Hours";
-    const hoursContent = document.createElement("div");
-    hoursContent.innerHTML = `Sunday: closed<br>
-                                Monday: 7am - 8pm<br>
-                                Tuesday: 7am - 8pm<br>
-                                Wednesday: 7am - 8pm<br>
-                                Thursday: 7am - 8pm<br>
-                                Friday: 7am - 8pm<br>
-                                Saturday: 8am - 8pm`;
+    const hoursContent = document.createElement("ul");
+    let hoursArray = ["Sunday: closed", "Monday: 7am - 8pm", "Tuesday: 7am - 8pm", "Wednesday: 7am - 8pm",
+                    "Thursday: 7am - 8pm", "Friday: 7am - 8pm", "Saturday: 8am - 8pm"]
+    for (let i = 0; i < hoursArray.length; i++) {
+        const day = document.createElement("li");
+        day.textContent = hoursArray[i];
+        hoursContent.appendChild(day);
+    }
     mainHours.append(hoursTitle, hoursContent);
     content.appendChild(mainHours);
     content.appendChild(document.createElement("br"));
